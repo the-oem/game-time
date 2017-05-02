@@ -4,7 +4,7 @@
   "description": "Starter kit for Turing School's front-end module 1 Game Time project",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "webpack-dev-server --open",
     "build": "./node_modules/webpack/bin/webpack.js",
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register"
   },
@@ -20,8 +20,8 @@
   "homepage": "https://github.com/turingschool-examples/game-time-starter-kit-FEm1#readme",
   "devDependencies": {
     "babel": "^6.5.2",
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.7",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
     "chai": "^3.5.0",
     "css-loader": "^0.26.0",
     "mocha": "^3.1.2",
