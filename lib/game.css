@@ -1,0 +1,17 @@
+body{
+  text-align: center;
+}
+
+#game {
+  border: 1px dashed;
+  margin: auto;
+  display: block;
+}
+
+button {
+  margin: 10px 5px 0 5px;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid black;
+}
