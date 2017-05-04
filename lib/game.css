@@ -6,6 +6,7 @@ body{
   border: 1px dashed;
   margin: auto;
   display: block;
+  background-color: #0b021d;
 }
 
 button {
