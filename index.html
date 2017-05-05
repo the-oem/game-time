@@ -7,11 +7,51 @@
 </head>
 
 <body>
-  <canvas id="game" width="600" height="600">
-  </canvas>
-  <span>
-    <button type="button" name="button" id="new-game">New Game</button>
-    <button type="button" name="button" id="pause">Pause</button>
+  <div class="title">
+    <pre>
+      ████████╗██████╗  ██████╗ ███╗   ██╗
+      ╚══██╔══╝██╔══██╗██╔═══██╗████╗  ██║
+         ██║   ██████╔╝██║   ██║██╔██╗ ██║
+         ██║   ██╔══██╗██║   ██║██║╚██╗██║
+         ██║   ██║  ██║╚██████╔╝██║ ╚████║
+         ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+     </pre>
+  </div>
+  <div class="container">
+    <div class="sidebar">
+      <p class="player-1">Player 1</p>
+      <div class="keys-container">
+        <div class="key-top-wrapper">
+          <p class="key-top key">W</p>
+        </div>
+        <div class="key-bottom-wrapper">
+          <p class="key-bottom key">A</p>
+          <p class="key-bottom key">S</p>
+          <p class="key-bottom key">D</p>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <canvas id="game" width="500" height="500"></canvas>
+    </div>
+    <div class="sidebar">
+      <p class="player-2">Player 2</p>
+      <div class="keys-container">
+        <div class="key-top-wrapper">
+          <p class="key-top key">^</p>
+        </div>
+        <div class="key-bottom-wrapper">
+          <p class="key-bottom key">
+            <</p>
+              <p class="key-bottom key">v</p>
+              <p class="key-bottom key">></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="button-wrapper">
+    <button type="button" name="button" id="new-game"><p>New Game</p><p>[N]</p></button>
+    <button type="button" name="button" id="pause"><p>Pause</p><p>[Space Bar]</p></button>
   </span>
   <script src="main.bundle.js"></script>
 </body>

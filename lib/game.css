@@ -1,18 +1,134 @@
-body {
-  text-align: center;
+* {
+  margin: 0;
+  border: 0;
 }
 
-#game {
-  border: 1px dashed;
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: black;
+}
+
+pre {
+  margin-top: 15px;
+  padding-right: 45px;
+}
+
+.title {
+  display: flex;
+  color: white;
+  justify-content: center;
+}
+
+#new-game,
+#pause {
+  font-size: 14px;
+  color: white;
+  border: 1px solid white;
+  background: black;
+}
+
+#new-game:hover,
+#pause:hover {
+  color: black;
+  background: white;
+}
+
+canvas {
   margin: auto;
-  display: block;
+  border: 1px dashed black;
   background-color: #0b021d;
+  box-shadow: inset 0 0 10px #00b4cc;
+}
+
+.container {
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 175px;
+  height: 500px;
+  color: white;
+  background: black;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
-  margin: 10px 5px 0 5px;
+  display: flex;
+  flex-direction: column;
   width: 100px;
   height: 40px;
+  margin: 20px 10px 10px 10px;
   text-align: center;
   border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-1 {
+  color: rgba(246, 106, 53, 1);
+}
+
+.player-2 {
+  color: rgba(24, 202, 230, 1);
+}
+
+.key {
+  margin: 2px;
+}
+
+.keys-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.key-top,
+.key-bottom {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  align-items: center;
+  justify-content: center;
+}
+
+.key-bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.keys-top-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.key-spacebar {
+  display: flex;
+  width: 90px;
+  height: 30px;
+  border: 1px solid white;
+  align-items: center;
+  justify-content: center;
+}
+
+.key-spacebar-wrapper,
+.key-n-wrapper {
+  display: flex;
+  justify-content: center;
 }
