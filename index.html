@@ -9,45 +9,49 @@
 <body>
   <div class="title">
     <pre>
-    ████████╗██████╗  ██████╗ ███╗   ██╗
-    ╚══██╔══╝██╔══██╗██╔═══██╗████╗  ██║
-       ██║   ██████╔╝██║   ██║██╔██╗ ██║
-       ██║   ██╔══██╗██║   ██║██║╚██╗██║
-       ██║   ██║  ██║╚██████╔╝██║ ╚████║
-       ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
-       </pre>
+      ████████╗██████╗  ██████╗ ███╗   ██╗
+      ╚══██╔══╝██╔══██╗██╔═══██╗████╗  ██║
+         ██║   ██████╔╝██║   ██║██╔██╗ ██║
+         ██║   ██╔══██╗██║   ██║██║╚██╗██║
+         ██║   ██║  ██║╚██████╔╝██║ ╚████║
+         ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+     </pre>
   </div>
-
   <div class="container">
+    <div class="sidebar">
+      <p class="player-1">Player 1</p>
+      <div class="keys-container">
+        <div class="key-top-wrapper">
+          <p class="key-top key">W</p>
+        </div>
+        <div class="key-bottom-wrapper">
+          <p class="key-bottom key">A</p>
+          <p class="key-bottom key">S</p>
+          <p class="key-bottom key">D</p>
+        </div>
+      </div>
+    </div>
     <div class="">
-          <canvas id="game" width="500" height="500"></canvas>
+      <canvas id="game" width="500" height="500"></canvas>
     </div>
-
-
-    <div class="game-play">
-      <header>
-        <p> GAME PLAY </p>
-        <p>Player 1</p>
-          <div class="keys-container">
-            <div class="keys-wrapper">
-              <p class="key-top">W</p>
-            </div>
-            <div class="keys-bottom">
-              <p class="key-bottom">A</p>
-              <p class="key-bottom">S</p>
-              <p class="key-bottom">D</p>
-            </div>
-          </div>
-        <p>Player 1 WASD</p>
-        <p>Player 2 UP DWN LEFT RHT</p>
-      </header>
+    <div class="sidebar">
+      <p class="player-2">Player 2</p>
+      <div class="keys-container">
+        <div class="key-top-wrapper">
+          <p class="key-top key">^</p>
+        </div>
+        <div class="key-bottom-wrapper">
+          <p class="key-bottom key">
+            <</p>
+              <p class="key-bottom key">v</p>
+              <p class="key-bottom key">></p>
+        </div>
+      </div>
     </div>
-
   </div>
-
-  <span>
-    <button type="button" name="button" id="new-game">New Game (n)</button>
-    <button type="button" name="button" id="pause">Pause [spacebar)</button>
+  <span class="button-wrapper">
+    <button type="button" name="button" id="new-game"><p>New Game</p><p>[N]</p></button>
+    <button type="button" name="button" id="pause"><p>Pause</p><p>[Space Bar]</p></button>
   </span>
   <script src="main.bundle.js"></script>
 </body>
