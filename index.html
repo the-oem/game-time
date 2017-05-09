@@ -9,25 +9,15 @@
 <body>
   <div class="title">
     <h1>TRON</h1>
-    <!-- <pre>
-      ████████╗██████╗  ██████╗ ███╗   ██╗
-      ╚══██╔══╝██╔══██╗██╔═══██╗████╗  ██║
-         ██║   ██████╔╝██║   ██║██╔██╗ ██║
-         ██║   ██╔══██╗██║   ██║██║╚██╗██║
-         ██║   ██║  ██║╚██████╔╝██║ ╚████║
-         ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
-     </pre> -->
   </div>
   <div class="container">
     <div class="sidebar">
       <p class="player-1 header">Player 1</p>
       <div>
-
-      <p class="player-1 wins">Wins</p>
-      <p class="player-1 score">01</p>
-    </div>
+        <p class="player-1 wins">Wins</p>
+        <p id="player1score" class="player-1 score">00</p>
+      </div>
       <div class="keys-container div">
-        <!-- <p class="player-1">Keys</p> -->
         <div class="keys-container">
           <div class="key-top-wrapper">
             <p class="key-top key">W</p>
@@ -43,9 +33,11 @@
 
     <canvas id="bike" width="500" height="500"></canvas>
     <canvas id="particle" width="500" height="500"></canvas>
-    <audio id="soundEfx2" src="/media/Bike.m4a" style="display: none;"></audio>
-    <audio id="soundEfx3" src="/media/Bike2.m4a" style="display: none;"></audio>
-    <audio id="soundEfx1" src="/media/intro.m4a" style="display: none;"></audio>
+    <audio id="soundEfx1" src="/media/tron-end-of-line.wav" style="display: none;"></audio>
+    <audio id="soundEfx2" src="/media/tron-classic-crash.wav" style="display: none;"></audio>
+    <audio id="soundEfx3" src="/media/tron-classic-go.wav" style="display: none;"></audio>
+    <!-- <audio id="soundEfx4" src="/media/tron-crash.wav" style="display: none;"></audio> -->
+
 
     <div class="popup">
       <p class="blink-me">START</p>
@@ -53,11 +45,10 @@
     <div class="sidebar">
       <p class="player-2 header">Player 2</p>
       <div>
-      <p class="player-2 wins">Wins</p>
-      <p class="player-1 score">10</p>
-    </div>
+        <p class="player-2 wins">Wins</p>
+        <p id="player2score" class="player-2 score">00</p>
+      </div>
       <div class="keys-container div">
-        <!-- <p class="player-2">Keys</p> -->
         <div class="keys-container">
           <div class="key-top-wrapper">
             <p class="key-top key">^</p>
@@ -69,8 +60,6 @@
                 <p class="key-bottom key">></p>
           </div>
         </div>
-
-
       </div>
     </div>
   </div>
