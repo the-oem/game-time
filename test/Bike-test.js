@@ -1,8 +1,7 @@
-var assert = require('chai').assert;
-var expect = require('chai').expect;
-var Bike = require('../lib/Bike.js');
-var GamePiece = require('../lib/GamePiece.js');
-
+import { assert } from 'chai'
+import { expect } from 'chai'
+import GamePiece from '../lib/GamePiece.js'
+import Bike from '../lib/Bike.js'
 
 describe('Bike testing occurs here...', () => {
   const ctx = new Object({
