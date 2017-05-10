@@ -4,13 +4,25 @@ var Bike = require('../lib/Bike.js');
 var GamePiece = require('../lib/GamePiece.js');
 
 
-describe('Bike testing occurs here', () => {
-  const ctx = new Object({fillStyle: 'blue', fillRect: (x, y, xx, xy) => {}});
-  const bike = new Bike(10, 10, 6, 6, "blue", ctx, 'player');
+describe('Bike testing occurs here...', () => {
+  const ctx = new Object({
+    fillStyle: 'blue',
+    fillRect: (x, y, xx, xy) => {}
+  });
+  const bike = new Bike(10, 10, 6, 6, "blue", 'player');
   const gamePiece1 = new GamePiece(10, 17, 6, 6, "blue");
   const gamePiece2 = new GamePiece(17, 17, 6, 6, "red");
-  const canvas = {width: 600, height: 600};
-  const opponentHistory = [{x: 17, y: 17, width: 6, height: 6, color: "red"}]
+  const canvas = {
+    width: 600,
+    height: 600
+  };
+  const opponentHistory = [{
+    x: 17,
+    y: 17,
+    width: 6,
+    height: 6,
+    color: "red"
+  }]
 
   it("should be an instance of bike...", () => {
     expect(bike).to.be.an.instanceof(Bike)
@@ -32,7 +44,7 @@ describe('Bike testing occurs here', () => {
     assert.equal(bike.x, 10);
     assert.equal(bike.y, 10);
   })
-  it("should have a height and width", () =>{
+  it("should have a height and width", () => {
     assert.equal(bike.width, 6);
     assert.equal(bike.height, 6);
   })
@@ -143,4 +155,5 @@ describe('Bike testing occurs here', () => {
   //   console.log(bike.aliveTime);
   //   assert.equal(bike.history.length, 1);
   // })
+
 })
