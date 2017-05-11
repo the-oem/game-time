@@ -1,174 +1,58 @@
-# Game Time Starter Kit (FE - Module 2)
+# TRON - Simply put, a classic.
 
-Basic Game Time starter kit.
+This is a game that was built as part of the *Turing School of Software and Design* curriculum. This is a module 2 group project for the front-end engineering program.
 
-## Initial Setup
+## Installation
 
-One person from your project will sets up the repository. That one person should follow these steps:
+Tron is a Javascript based game built using jQuery 3.2.1 and ES6. In order to install and play, follow these instructions:
+1. Clone the repository with `git clone git@github.com:the-oem/game-time.git`
+2. In a terminal window, navigate to the repository and run `npm install`. This will install all the dependencies for the project.
+3. In the same terminal window, run `npm start` to start the server.
+4. Open a browser window and navigate to `http://http://localhost:8080/`.
+5. Enjoy!
 
-1. Clone this starter kit repository and rename the repository to `game-time` in one command
+*Start Screenshot*
+![Tron Start Screen](/media/screenshots/tron_start_screen.png)
 
-  ```shell
-  git clone git@github.com:turingschool-examples/game-time-starter-kit-FEm1.git game-time
-  ```
+*Gameplay Screenshot*
+![Tron Gameplay Screen](/media/screenshots/tron_gameplay_screen.png)
 
-2. Change into the `game-time` directory
+## Usage
 
-3. Remove the default remote (origin)
+Tron is a 2-player game, with a fairly intuitive interface. The goal of the game is to box the other player in such that they crash into either their bike trail or yours. Some features of the game are:
 
-  ```shell
-  git remote rm origin
-  ```
+* Players can cross the grid boundary and appear on the other side of the game board. This adds an element of strategy to the game.
+* The trail of your bike will start to disappear after 10 seconds. This also adds an element of strategy. When you think you've boxed your opponent in, they may discover a way to avoid death because of this feature!
 
-4. Create a new repository on GitHub named `game-time`
+Movement is documented visually in the game, as follows:
+* Player 1 uses the `W` (up), `A` (left), `S` (down), `D` (right) keys for movement.
+* Player 2 uses the arrows keys for movement, with the arrow corresponding to the direction.
+* `R` will reset the reload the entire game, and reset the scores.
+* `N` will start a new game, but maintain the player scores.
+* `Spacebar` will pause the game.
 
-5. Add your new repository remote to the game time starter kit - **your remote URL and user name will be different in the command below**
+## Contributing
 
-  ```shell
-  git remote add origin git@github.com:robbiejaeger/game-time.git
-  ```
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
 
-6. Install the dependencies of the starter kit
+## History
 
-  ```shell
-  npm install
-  ```
+This is currently Version 1 of Tron, however we'll be adding additional features in the coming months. The proposed feature list is below. If you have ideas, let us know!
+0. Add sprite graphics for the player bikes.
+1. Single player mode (vs a computer controlled bike).
+2. Ability for users to choose bike color and type (big and slow or small and fast?).
+3. Ability for users to mute all sound effects.
+4. More difficult game modes, such as random obstacles placed on the game board, and randomly placed starting locations for each player.
+5. Ability for 2 players to compete on different computers (via Web Sockets).
+6. Power-ups for each player, such as a limited number of turbo boosts.
 
-7. Add, commit, and push up to your repository
+## Credits
 
-  ```shell
-  git add .
-  git commit -m "Initial commit using starter kit"
-  git push origin master
-  ```
+This game was built with a tremendous amount of blood, sweat, and tears by two really humble guys named Jason "JC" Collins and Evan Miller. They're rad dudes, and we think you should totally be friends with them.
 
-8. Now add your team member(s) as collaborators to the repository. They can now clone down your `game-time` repository as normal.
-
-9. Once each partner clones down the repo, they need to run `npm install` to install the dependencies on their machine.
-
-## Run the Server
-
-To see your code in action, you need to fire up a development server. Use the command:
-
-```shell
-npm start
-```
-
-Once the server is running, visit in your browser:
-
-* `http://localhost:8080/webpack-dev-server/` to run your application.
-* `http://localhost:8080/webpack-dev-server/test.html` to run your test suite in the browser.
-
-To build the static files:
-
-```js
-npm run build
-```
-
-## Run Tests in the Terminal
-
-To run all of your tests:
-
-```js
-npm test
-```
-
-## File Organization
-
-Webpack is a little opinionated about how files are organized. Here is a brief guide on how to organize development and test files.
-
-### Development Files
-
-Node and webpack work together to help us organize our files and keep responsibilities separated.
-
-For example, if we have the `lib/index.js` file and a `lib/Block.js` file:
-
-**lib/index.js**
-
-```javascript
-var Block = require('./Block');
-
-var canvas = document.getElementById('game');
-var context = canvas.getContext('2d');
-
-var blocks = [];
-
-blocks.push(new Block(50, 50, 10, 10, context));
-blocks.push(new Block(100, 50, 10, 10, context));
-
-requestAnimationFrame(function gameLoop() {
-  context.clearRect(0, 0, canvas.width, canvas.height);
-
-  this.blocks.forEach(function(block){
-    block.draw()
-    block.move()
-  })
-
-  requestAnimationFrame(gameLoop);
-});
-```
-
-**lib/Block.js**
-
-```javascript
-function Block(x, y, width, height, context) {
-  this.x = x;
-  this.y = y;
-  this.width = width;
-  this.height = height;
-  this.context = context;
-}
-
-Block.prototype.draw = function () {
-  this.context.fillRect(this.x, this.y, this.width, this.height);
-};
-
-Block.prototype.move = function () {
-  this.y++;
-};
-
-module.exports = Block;
-```
-
-All of the `Block.js` code could live in the `index.js` file, but that would go against our philosophy of separating responsibility between files.
-
-There are two main things to pay attention to here:
-
-1. At the top of the `index.js` file, we require the `Block.js` file using the line of code `var Block = require('./Block');` (we leave out the `.js`). This brings in the code from the `Block.js` file so we can use that file's code in the `index.js` file.
-
-2. In the `Block.js` file, the bottom line says `module.exports = Block;` which says what we want this file to export when we say `require` in other files, like in `index.js`.
-
-So now we have two files that can share code between each other, but we have to pay attention to what we export and what we require. If we didn't do this, then when we try to make a new Block in the `index.js` file, it won't know what Block we're talking about!
-
-### Test Files
-
-Near the end of game time, you will have multiple objects for your game that are tested separately with individual test files. The `test/index.js` file serves as an "entry point" for mocha to load all of the tests you write.
-
-Test file organization is a bit different from development files. If we want to test the `Block.js` file from above, then this is how we would do it. For each object file (in this case `block.js`), we want to have a corresponding test file. So in the `test` directory, we would create a new file called `test/Block-test.js`. Here is what that file would look like:
-
-**test/Block-test.js**
-
-```javascript
-var chai = require('chai');
-var assert = chai.assert;
-
-var Block = require('../lib/Block');
-
-describe('Block', function() {
-  context('with default attributes', function() {
-    // Your tests here...  
-  });  
-});
-```
-
-**test/index.js**
-
-```javascript
-require('./Block-test')
-```
-
-Two main points to pay attention to:
-
-1. In the `Block-test.js` file, we require the `Block.js` file so that we can construct blocks in our tests.
-
-2. In the `test/index.js` file, we require the `Block-test.js` file so that we can view the test results in the browser (at `http://localhost:8080/webpack-dev-server/test.html`).
+* Jason "JC" Collins [GitHub profile](https://github.com/the-oem)
+* Evan Miller [GitHub profile](https://github.com/EvanSays)
