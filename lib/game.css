@@ -10,6 +10,7 @@
 
  * {
    border: 0;
+   box-sizing: border-box;
    margin: 0;
  }
 
@@ -89,7 +90,8 @@
    width: 175px;
  }
 
- button {
+ button,
+ .difficulty {
    align-items: center;
    border: 1px solid #c7c6c6;
    border-radius: 2px;
@@ -193,6 +195,19 @@
  .popup.intro {
    flex-direction: column;
    height: 126px;
+ }
+
+ .difficulty {
+   font-size: 14px;
+   color: rgba(24, 202, 230, .6);
+   font-family: Score;
+   align-items: flex-start;
+ }
+
+ .difficulty-label {
+   vertical-align: middle;
+   padding: 2px;
+   margin-left: 10px;
  }
 
  .blink-me {
