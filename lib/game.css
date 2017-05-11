@@ -40,17 +40,22 @@
  }
 
  #new-game,
- #pause {
+ #pause,
+ #reset-game {
    font-size: 14px;
    color: rgb(199, 198, 198);
-   border: 1px solid white;
+   border: 1px solid rgb(199, 198, 198);
    background: black;
  }
 
- #new-game:hover,
- #pause:hover {
-   color: black;
-   background: rgb(199, 198, 198);
+ #new-game:hover {
+   color: rgba(246, 106, 53, 1);
+   cursor: pointer;
+ }
+
+ #pause:hover,
+ #reset-game:hover {
+   color: rgba(24, 202, 230, 1);
    cursor: pointer;
  }
 
@@ -63,7 +68,6 @@
 
  #particle {
    position: absolute;
-   /*background-color: #0b021d;*/
    z-index: 0;
  }
 
@@ -89,13 +93,15 @@
  button {
    display: flex;
    flex-direction: column;
-   width: 100px;
-   height: 40px;
+   width: 125px;
+   height: 50px;
    margin: 20px 10px 10px 10px;
    text-align: center;
-   border: 1px solid black;
+   border: 1px solid rgb(199, 198, 198);
+   border-radius: 2px;
    align-items: center;
    justify-content: center;
+   text-transform: uppercase;
  }
 
  .button-wrapper {
@@ -180,6 +186,7 @@
    display: flex;
    justify-content: center;
  }
+
  .popup.pause,
  .popup.intro {
    display: flex;
@@ -198,12 +205,10 @@
    z-index: 2;
    white-space: pre-wrap;
  }
-.popup.intro {
-  height: 126px;
-  flex-direction: column;
-}
- .popup:hover {
-   cursor: pointer;
+
+ .popup.intro {
+   height: 126px;
+   flex-direction: column;
  }
 
  .blink-me {
