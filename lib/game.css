@@ -11,6 +11,7 @@
  * {
    margin: 0;
    border: 0;
+   box-sizing: border-box;
  }
 
  body {
@@ -84,13 +85,13 @@
    width: 175px;
    height: 500px;
    color: #00b4cc;
-   ;
    background: black;
    justify-content: space-around;
    align-items: center;
  }
 
- button {
+ button,
+ .difficulty {
    display: flex;
    flex-direction: column;
    width: 125px;
@@ -134,10 +135,6 @@
    font-size: 100px;
    color: #c7c6c6;
    margin-top: 2px;
- }
-
- .keys-container.div {
-   /*margin-bottom: 120px;*/
  }
 
  .key {
@@ -209,6 +206,19 @@
  .popup.intro {
    height: 126px;
    flex-direction: column;
+ }
+
+ .difficulty {
+   font-size: 14px;
+   color: rgba(24, 202, 230, .6);
+   font-family: Score;
+   align-items: flex-start;
+ }
+
+ .difficulty-label {
+   vertical-align: middle;
+   padding: 2px;
+   margin-left: 10px;
  }
 
  .blink-me {
