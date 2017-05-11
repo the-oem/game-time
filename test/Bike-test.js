@@ -39,6 +39,12 @@ describe('Bike testing occurs here...', () => {
     assert.equal(bike.name, 'player');
   });
 
+  it("should update it's score and it should be a 2 digit format", () => {
+    bike.score = 0;
+    var score = bike.updateScore();
+    expect(score).to.equal('01');
+  })
+
   it("should have an x and y value", () => {
     assert.equal(bike.x, 10);
     assert.equal(bike.y, 10);
