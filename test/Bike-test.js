@@ -6,11 +6,11 @@ import Bike from '../lib/Bike.js'
 describe('Bike testing occurs here...', () => {
   const ctx = new Object({
     fillStyle: 'blue',
-    fillRect: (x, y, xx, xy) => {}
+    fillRect: () => {}
   });
   const bike = new Bike(10, 10, 6, 6, "blue", 'player');
   const gamePiece1 = new GamePiece(10, 17, 6, 6, "blue");
-  const gamePiece2 = new GamePiece(17, 17, 6, 6, "red");
+  // const gamePiece2 = new GamePiece(17, 17, 6, 6, "red");
   const canvas = {
     width: 600,
     height: 600
@@ -42,6 +42,7 @@ describe('Bike testing occurs here...', () => {
   it("should update it's score and it should be a 2 digit format", () => {
     bike.score = 0;
     var score = bike.updateScore();
+
     expect(score).to.equal('01');
   })
 
